@@ -1,0 +1,49 @@
+body {
+    background-color: #202020; /* Slightly darker for better contrast */
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+}
+
+.key {
+    border: 5px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 100px;
+    text-align: center;
+    background-color: #333; /* Darker background */
+    transition: all 0.05s ease; 
+    box-shadow:  
+        0 0 5px #00f,  /* Blue neon glow */
+        0 0 15px #00f, 
+        0 0 30px #00f; 
+}
+
+kbd {
+    font-size: 20px;
+    color: #ddd;  /* Light text color */
+    text-shadow: 0 0 5px #fff; /* Subtle text glow */
+}
+
+.key:hover {
+    box-shadow: 
+        0 0 10px #00f, 
+        0 0 25px #00f, 
+        0 0 50px #00f; 
+}
+
+.playing {
+    transform: scale(1.1); 
+    box-shadow: 
+        0 0 20px #ff9800, /* Orange glow on sound */
+        0 0 40px #ff9800, 
+        0 0 80px #ff9800; 
+}

@@ -1,0 +1,21 @@
+body {
+    background-color: #151515; /* Dark background */
+    background-image: linear-gradient(45deg, rgba(0,0,0,0.1), rgba(255,255,255,0.1)); /* Subtle gradient */
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#clock {
+    font-size: 80px; 
+    padding: 30px; 
+    color: #ffffff; /* White text for contrast */
+    text-shadow: 0 0 5px rgba(255,255,255,0.8); /* Soft text shadow */ 
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    backdrop-filter: blur(8px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
