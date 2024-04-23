@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Adjust this to space-between for proper alignment */
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .logo {
+    color: #f2f2f2;
+    font-size: 20px;
+    text-decoration: none;
+    order: 0; /* Reset the order for logo */
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .menu ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+  }
+  
+  .menu li a, .menu li .search-item {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .menu li.search-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu .search-container {
+    display: flex;
+  }
+  
+  .menu .search-input {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+  }
+  
+  .menu .search-button {
+    padding: 10px;
+    background: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .menu a:hover, .menu .search-button:hover, .menu .social-icon:hover {
+    background-color: #555;
+  }
+  
+  .icon {
+    display: none;
+    color: #f2f2f2;
+    font-size: 20px;
+    position: absolute;
+    right: 10px; /* Position the icon to the right */
+    top: 8px;
+  }
+  
+  .social-media {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* This will align the social icons to the right */
+  }
+  
+  .social-icon {
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.3s;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav {
+      justify-content: flex-start; /* Align items to the start on small screens */
+    }
+  
+    .menu, .social-media {
+      display: none; /* Hide both menu and social media initially */
+      width: 100%;
+      justify-content: center;
+    }
+  
+    .menu.responsive {
+      display: flex; /* Show the menu when responsive class is added */
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu ul li a, .menu ul li.search-item {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .menu .search-container {
+      justify-content: center;
+    }
+  
+    .icon {
+        display: block;
+        color: #f2f2f2;
+        font-size: 20px;
+        position: absolute;
+        right: 10px; /* Position the icon on the right */
+        top: 50%;
+        transform: translateY(-50%); /* Vertically center the icon */
+        padding: 14px;
+        z-index: 2000; /* Make sure it's on top of other elements */
+      }
+      
+      
+  
+    .social-media.responsive {
+      display: flex; /* Show social media icons in responsive mode */
+      position: absolute;
+      top: 0;
+      right: 0;
+      flex-direction: row; /* Align icons in a row */
+    }
+    
+    /* Additional styles to handle the search bar and social media alignment */
+    .menu.responsive + .social-media {
+      order: 3; /* Position social media at the bottom */
+      width: 100%;
+      justify-content: center;
+      position: relative; /* Position relative to parent */
+      flex-direction: row;
+      padding-top: 10px; /* Add some space above the social media icons */
+    }
+  
+    .menu.responsive .search-item {
+      order: 2; /* Position search bar above social media icons */
+    }
+  }
+  

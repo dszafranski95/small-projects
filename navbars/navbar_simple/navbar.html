@@ -2,112 +2,38 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="navbar.css">
+<script src="navbar.js" defer></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.topnav a, .social-icon {
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.search-container {
-  display: flex;
-}
-
-.search-input {
-  padding: 10px;
-  font-size: 17px;
-  border: none;
-  outline: none;
-}
-
-.search-button {
-  padding: 10px;
-  background: #555;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.topnav a:hover, .search-button:hover, .social-icon:hover {
-  background-color: #555;
-}
-
-.icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav {
-    flex-direction: column;
-  }
-  .topnav a:not(:first-child), .search-container, .social-media {
-    display: none;
-  }
-  .topnav a.icon {
-    display: block;
-  }
-  .topnav.responsive .icon {
-    position: static;
-  }
-  .topnav.responsive a,
-  .topnav.responsive .search-container,
-  .topnav.responsive .social-media {
-    display: block;
-    text-align: left;
-  }
-}
-</style>
 </head>
 <body>
 
 <div class="topnav" id="myTopnav">
-  <a href="#home" class="active">Home</a>
-  <div class="search-container">
-    <input type="text" placeholder="Search.." class="search-input">
-    <button class="search-button"><i class="fa fa-search"></i></button>
-  </div>
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+  <a href="javascript:void(0);" class="logo">LOGO</a>
+  <nav class="menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#offer">Offer</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li class="search-item">
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-input">
+          <button class="search-button"><i class="fa fa-search"></i></button>
+        </div>
+      </li>
+    </ul>
+  </nav>
   <div class="social-media">
     <a href="#" class="social-icon"><i class="fa fa-facebook"></i></a>
     <a href="#" class="social-icon"><i class="fa fa-instagram"></i></a>
     <a href="#" class="social-icon"><i class="fa fa-twitter"></i></a>
   </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
 </div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
-</script>
 
 </body>
 </html>
